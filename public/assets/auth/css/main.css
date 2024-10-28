@@ -1,0 +1,43 @@
+.container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    background-color: #f2f2f2;
+}
+
+.img-container {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 400%; /* 100% for each image */
+}
+
+.img-slide {
+    display: flex;
+    width: 100%;
+}
+
+.img-slide img {
+    width: 100%;
+    height: auto;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#radio1:checked ~ .img-container {
+    transform: translateX(0%);
+}
+
+#radio2:checked ~ .img-container {
+    transform: translateX(-25%);
+}
+
+#radio3:checked ~ .img-container {
+    transform: translateX(-50%);
+}
+
+#radio4:checked ~ .img-container {
+    transform: translateX(-75%);
+}
